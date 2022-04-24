@@ -1,0 +1,100 @@
+
+/* App Window */
+@define-color bg_color #000;
+@define-color window_bg @bg_color;
+@define-color window_border_color rgba(0,0,0, 0);
+@define-color prefs_backgroud rgba(0,0,0, 0);
+
+/* Input */
+@define-color selected_bg_color #106eea;
+@define-color selected_fg_color #fff;
+@define-color input_color #fff;
+@define-color caret_color darker(@input_color);
+
+/* Result items */
+@define-color item_name rgba(222,222,222, 0.70);
+@define-color item_text #999;
+@define-color item_box_selected #106eea;
+@define-color item_text_selected #fff;
+@define-color item_name_selected rgba(255,255,255, 0.70);
+@define-color item_shortcut_color rgba(255,255,255, 0.25);
+@define-color item_shortcut_shadow rgba(0,0,0, 0.00);
+@define-color item_shortcut_color_sel #fff;
+@define-color item_shortcut_shadow_sel darker(@item_box_selected);
+
+.app {
+    background-color: @window_bg;
+    border: 1px solid @window_border_color;;
+    border-radius: 10px;
+    box-shadow: none;
+    margin:0 -12px;
+}
+
+.input {
+    color: @input_color;
+    padding: 0;
+}
+
+.item-box {
+    border-radius: 5px;
+}
+
+/* Selected text in input */
+.input *:selected,
+.input *:focus,
+*:selected:focus {
+    background-color: alpha (@selected_bg_color, 0.9);
+    color: @selected_fg_color;
+}
+
+.item-text {
+    color: @item_text;
+}
+
+.item-name {
+    color: @item_name;
+}
+
+.selected.item-box {
+    background-color: @item_box_selected;
+}
+.selected.item-box .item-text {
+    color: @item_text_selected;
+}
+.selected.item-box .item-name {
+    color: @item_name_selected;
+}
+.item-shortcut {
+    color: @item_shortcut_color;
+    text-shadow: none;
+}
+.selected.item-box .item-shortcut {
+    color: @item_shortcut_color_sel;
+    text-shadow: none;
+}
+
+.prefs-btn {
+    opacity: 0.6;
+}
+.prefs-btn * {
+    box-shadow: none;
+}
+.prefs-btn:hover {
+    background-color: @prefs_backgroud;
+}
+.no-window-shadow {
+    margin: -20px;
+}
+
+.result-box {
+    margin: 0px 6px -4px 6px;
+}
+
+.item-frame  {
+    border-top: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 6%, rgba(65, 65, 65, 1)  6%, rgba(65, 65, 65, 1) 51%, rgba(65, 65, 65, 1) 94%, rgba(255, 255, 255, 0) 94%, rgba(255, 255, 255, 0) 100%);
+}
+.item-frame:first-child {
+    border-width: 0px;
+}
