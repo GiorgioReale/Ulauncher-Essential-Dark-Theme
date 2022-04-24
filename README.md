@@ -2,6 +2,7 @@
 A theme for Ulauncher. Essential Dark Theme.
 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ## Screenshot
 ![](Screenshot_2022-04-24_19-03-05.png)
